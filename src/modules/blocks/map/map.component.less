@@ -1,0 +1,50 @@
+@import url(../../shared/colors.less);
+
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: @color-base-2;
+
+    padding: 0 100px;
+    height: 80vh;
+    min-height: 500px;
+}
+
+.wrapper {
+    flex: 1;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contacts {
+    flex: 1;
+
+    .title {
+        margin-top: 40px;
+        margin-bottom: 16px;
+
+        &:first-child {
+            margin-top: 48px;
+        }
+    }
+}
+
+.map {
+    flex: 1;
+
+    border-radius: 16px;
+    background-image: url('/assets/map.png');
+}
+
+.tui-text_body-l {
+    color: @color-text-2;
+    margin-top: 8px;
+
+    span {
+        color: @color-text-3;
+    }
+}

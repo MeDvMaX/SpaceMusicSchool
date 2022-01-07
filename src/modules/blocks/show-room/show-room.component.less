@@ -1,0 +1,53 @@
+@import url(../../shared/colors.less);
+
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: black;
+
+    padding: 50px 100px;
+    height: 80vh;
+    min-height: 500px;
+
+    background-color: @background-base-2;
+    border-radius: 40px;
+}
+
+.title {
+    flex: 1;
+
+    .discription {
+        color: @color-logo;
+    }
+}
+
+.images {
+    display: flex;
+
+    flex: 1;
+    height: 100%;
+
+    &-groupe {
+        display: flex;
+        flex-direction: column;
+
+        flex: 1;
+        margin: 0 12px;
+
+        div {
+            border-radius: 16px;
+            background-image: url(/assets/max.png);
+            flex: 1;
+        }
+
+        .image-1 {
+            margin-bottom: 12px;
+        }
+
+        .image-3 {
+            margin: 130px 0;
+        }
+    }
+}

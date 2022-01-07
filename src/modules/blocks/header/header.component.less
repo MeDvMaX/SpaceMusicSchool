@@ -1,0 +1,59 @@
+@import url(../../shared/colors.less);
+
+:host {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    height: 80px;
+    width: calc(100% - 200px);
+    padding: 0 100px;
+
+    background-color: @background-base-1;
+
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+.header_item {
+    display: flex;
+
+    flex: 1;
+    align-self: center;
+
+    &_logo {
+        flex: 1;
+        justify-content: left;
+
+        span {
+            color: @color-logo;
+        }
+    }
+    
+    &_links {
+        flex: 2;
+        justify-content: center;
+
+        a {
+            margin: 0 12px;
+            color: @color-base-2;
+        }
+    }
+    
+    &_button {
+        flex: 1;
+        justify-content: right;
+
+        button {
+            flex: 0;
+            // margin-right: 100px;
+
+            // ::ng-deep tui-wrapper {
+            //     color: @color-base-2;
+            //     background: #232F3F;
+            // }
+        }
+    }
+    
+}

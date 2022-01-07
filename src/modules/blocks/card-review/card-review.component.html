@@ -1,0 +1,40 @@
+<div class="wrapper">
+    <div class="title tui-text_h1">
+        {{title}}
+    </div>
+    
+    <div class="cards" >
+        <tui-carousel [draggable]="true" [itemsCount]="3" [(index)]="index">
+            <ng-container *ngFor="let card of cards; let i = index">
+                <div *tuiItem
+                    [class.item_active]="i === index + 1">
+                    <a class="island"
+                        size="l"
+                        href="{{card.link}}"
+                        tuiIsland
+                        [hoverable]="true">
+                        <div class="wrapper">
+                            <div class="text">
+                                <figure class="tui-island__figure">
+                                    <div class="some-figure"></div>
+                                </figure>
+                                <div class="text-block">
+                                    <h3 class="tui-text_h4">
+                                        {{card.title}}
+                                    </h3>
+                                    <p class="tui-text_body-m">
+                                        {{card.discription}}
+                                    </p>
+                                </div>
+                                <div *ngIf="card.comment">
+                                    <span>{{card.comment.author}}</span>
+                                    <tui-svg src="tuiIconMastercard"></tui-svg>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </ng-container>
+        </tui-carousel>
+    </div>
+</div>

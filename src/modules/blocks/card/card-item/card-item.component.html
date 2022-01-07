@@ -1,0 +1,26 @@
+<ng-container *ngIf="card">
+    <a class="island"
+       [ngClass]="{'island-image': withImage}"
+       size="l"
+       href="{{card.link}}"
+       tuiIsland
+       [hoverable]="true">
+        <div class="wrapper" [ngClass]="{'wrapper-image': withImage}">
+            <div *ngIf="withImage" class="image" [ngStyle]="style">
+            </div>
+            <div class="text">
+                <figure class="tui-island__figure">
+                    <div class="some-figure"></div>
+                </figure>
+                <div class="text-block">
+                    <h3 class="tui-text_h4">
+                        {{card.title}}
+                    </h3>
+                    <p class="tui-text_body-m">
+                        {{card.discription}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </a>
+</ng-container>

@@ -1,0 +1,16 @@
+<div *ngIf="item" class="wrapper">
+    <div class="text">
+        <div class="title tui-text_h1">{{item.title}}</div>
+        <div class="description tui-text_body-xl">{{item.discription}}</div>
+    </div>
+
+    <form [formGroup]="form" class="form">
+        <tui-input class="b-form" formControlName="name">
+            Имя
+        </tui-input>
+        <tui-input class="b-form" formControlName="phone">
+            Телефон
+        </tui-input>
+        <button class="b-form button" tuiButton size='l'>{{item.buttonTitle}}</button>
+    </form>
+</div>

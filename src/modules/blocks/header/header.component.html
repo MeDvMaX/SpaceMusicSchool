@@ -1,0 +1,18 @@
+<div class="header_item header_item_logo">
+    <span class="tui-text_h6">SpaceMusic</span>
+</div>
+
+<div class="header_item header_item_links">
+    <a class="tui-text-body-m-2"
+       *ngFor="let link of links"
+       tuiLink
+       [routerLink]="link.link">
+       {{link.title}}
+    </a>
+</div>
+
+<div class="header_item header_item_button">
+    <button class="header_button" tuiButton type="button" size="s">
+        <span class="tui-text-body-m-2" style="margin: 0 26px">Записатся</span>
+    </button>
+</div>
