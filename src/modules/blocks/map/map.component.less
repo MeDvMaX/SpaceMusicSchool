@@ -1,23 +1,13 @@
-@import url(../../shared/colors.less);
+@import url(../../shared);
 
-:host {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    color: @color-base-2;
-
-    padding: 0 100px;
-    height: 80vh;
-    min-height: 500px;
-}
-
-.wrapper {
-    flex: 1;
-
+.sm-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    flex: 1;
+
+    color: @color-base-2;
 }
 
 .contacts {
@@ -37,8 +27,12 @@
     flex: 1;
 
     border-radius: 16px;
-    background-image: url('/assets/map.png');
+
+    ::ng-deep ymaps {
+        border-radius: 16px;
+    }
 }
+
 
 .tui-text_body-l {
     color: @color-text-2;

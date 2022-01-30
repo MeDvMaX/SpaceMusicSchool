@@ -1,19 +1,21 @@
-<div class="title" *ngIf="item">
-    <div class="tui-text_h1">
-        {{item.title}}
+<div class="sm-container" *ngIf="item">
+    <div class="title">
+        <div class="sm-font-h1">
+            {{item.title}}
+        </div>
+        <div class="discription sm-font-h1">
+            {{item.discription}}
+        </div>
     </div>
-    <div class="discription tui-text_h1">
-        {{item.discription}}
-    </div>
-</div>
-
-<div class="images">
-    <!-- <img *ngFor="let image of item?.images" src="{{image.src}}" alt="Перейти"> -->
-    <div class="images-groupe">
-        <div class="image-1"></div>
-        <div class="image-2"></div>
-    </div>
-    <div class="images-groupe">
-        <div class="image-3"></div>
+    
+    <div class="images" *ngIf="item.images as images">
+        <!-- <img *ngFor="let image of item.images" src="{{image.src}}" alt="Перейти"> -->
+        <div class="images-groupe">
+            <div class="image image-1">Учись музыке, что бы создавать собственные произведения</div>
+            <div class="image image-2">Запиши что угодно в студийном качестве</div>
+        </div>
+        <div class="images-groupe">
+            <div class="image image-3">Создай собственный клип и стань звездой YouTube или поделись с друзьями</div>
+        </div>
     </div>
 </div>

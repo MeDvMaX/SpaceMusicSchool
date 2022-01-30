@@ -1,17 +1,22 @@
-<div *ngIf="item" class="main-wrapper">
-    <div class="title tui-text_h1">
-        {{item.title}}
-    </div>
-    <div class="description tui-text_body-l">
-        Воплоти свои самые смелые музыкальные мечты в нашей
-        <br>
-        студии <span class="logo">Space Music</span>
-    </div>
-    <div class="button">
-        <button tuiButton size="m">{{item.buttonTitle}}</button>
-    </div>
-</div>
+<block-header></block-header>
 
-<div class="main-image">
-    <img src="https://img1.freepng.ru/20180204/wze/kisspng-macintosh-mac-os-x-lion-macos-macbook-operating-sy-apple-logo-5a77a761e20a32.4466539815177910739259.jpg" alt="">
+<div class="sm-container">
+    <div *ngIf="item" class="main-wrapper">
+        <div class="title sm-font-h1 sm-bold-h" [innerHTML]="item.title">
+        </div>
+        <div class="description sm-font-p2" [innerHTML]="item.discription">
+            <!-- Воплоти свои самые смелые музыкальные мечты в нашей
+            <br>
+            студии <span class="logo">Space Music</span> -->
+        </div>
+        <div class="button">
+            <button tuiButton size="m">{{item.buttonTitle}}</button>
+        </div>
+    </div>
 </div>
+<!-- <div class="sm-container sm-container-image">
+    <img class="background"
+        src="/assets/main/background-x1.png"
+        alt=""
+        srcset="/assets/main/background-x1.png 640w, /assets/main/background-x2.png 960w, /assets/main/background-x3.png 1024w">
+</div> -->

@@ -10,8 +10,8 @@ import { BlockCardItem, BlockCardReviewItem, BlockFormItem, BlockMainItem, Block
 export class PageMainComponent implements OnInit {
 
   main: BlockMainItem = {
-    title: 'Открой сердце музыке',
-    discription: '',
+    title: 'Привет, мы — <br> Space Music',
+    discription: 'Воплоти свои самые смелые музыкальные<br>мечты в нашей студии',
     buttonTitle: 'Записаться на занятие',
     butoonLink: '',
   };
@@ -21,17 +21,17 @@ export class PageMainComponent implements OnInit {
     discription: 'Мы поможем...',
     images: [
       {
-        src: '/assets/max.png',
+        src: '/assets/show-room/room-1.png',
         link: '',
         title: 'Учись музыке, что бы создавать собственные произведения'
       },
       {
-        src: '/assets/max.png',
+        src: '/assets/show-room/room-2.png',
         link: '',
         title: 'Запиши что угодно в студийном качестве'
       },
       {
-        src: '/assets/max.png',
+        src: '/assets/show-room/room-3.png',
         link: '',
         title: 'Создай собственный клип и стань звездой YouTube или поделись с друзьями'
       },
@@ -123,13 +123,13 @@ export class PageMainComponent implements OnInit {
     {
       title: 'Максик',
       subtitle: 'Основатель SpaceMusic',
-      src: '/assets/max.png',
+      src: '/assets/card-review/max.png',
       link: 'string',
     },
     {
       title: 'Лёха',
       subtitle: 'Основатель SpaceMusic',
-      src: '/assets/max.png',
+      src: '/assets/card-review/alex.png',
       link: 'string',
     }
   ];

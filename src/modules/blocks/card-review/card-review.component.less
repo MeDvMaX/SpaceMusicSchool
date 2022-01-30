@@ -1,7 +1,6 @@
-@import url(../../shared/colors.less);
+@import url(../../shared);
 
-:host {
-    padding: 0 100px;
+.sm-container {
     border-radius: 40px;
 }
 
@@ -11,9 +10,6 @@
     justify-content: center;
     flex-direction: column;
 
-    min-height: 470px;
-    margin: 80px 0;
-
     .title {
         display: flex;
         justify-content: left;
@@ -21,4 +17,32 @@
 
         // margin-top: 80px;
     }
+
+    .cards {
+        .description {
+            margin-bottom: 40px;
+        }
+
+        ::ng-deep .t-wrapper {
+
+            padding-top: 40px;
+        }
+    }
 }
+
+// .island {
+//     height: 200px;
+
+//     flex: 1;
+
+//     .wrapper {
+//         .text {
+//             margin-top: 4px;
+//             margin-right: 20px;
+
+//             .sm-font-h4 {
+//                 margin: 0;
+//             }
+//         }
+//     }
+// }

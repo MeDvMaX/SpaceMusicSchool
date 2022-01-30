@@ -7,6 +7,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageMainModule } from "../main/main.module";
+import { AngularYandexMapsModule, YaConfig } from "angular8-yandex-maps";
+
+const mapConfig: YaConfig = {
+  apikey: '12acd2e8-6932-4da2-80df-2696c39f386e',
+};
 
 @NgModule({
   declarations: [

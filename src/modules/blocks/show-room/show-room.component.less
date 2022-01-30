@@ -1,15 +1,11 @@
-@import url(../../shared/colors.less);
+@import url(../../shared);
 
-:host {
+.sm-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     color: black;
-
-    padding: 50px 100px;
-    height: 80vh;
-    min-height: 500px;
 
     background-color: @background-base-2;
     border-radius: 40px;
@@ -26,28 +22,57 @@
 .images {
     display: flex;
 
-    flex: 1;
     height: 100%;
+    width: 40%;
 
     &-groupe {
         display: flex;
         flex-direction: column;
+
+        // align-items: center;
+        // justify-content: center;
 
         flex: 1;
         margin: 0 12px;
 
         div {
             border-radius: 16px;
-            background-image: url(/assets/max.png);
             flex: 1;
         }
 
+        .image {
+            display: flex;
+            align-items: end;
+
+            background-size: cover;
+            padding: 12px;
+            color: @color-base-2;
+
+            font: var(--tui-font-heading-6)
+        }
+
         .image-1 {
+            height: 240px;
+
             margin-bottom: 12px;
+
+            flex: 1;
+
+            background: linear-gradient(218.48deg, rgba(0, 0, 0, 0.24) 43.26%, rgba(12, 12, 12, 0.74) 74.04%), url(/assets/show-room/room-1.png);;
+        }
+
+        .image-2 {
+            height: 280px;
+
+            flex: 2;
+
+            background: linear-gradient(218.48deg, rgba(0, 0, 0, 0.24) 43.26%, rgba(12, 12, 12, 0.74) 74.04%),  url(/assets/show-room/room-3.png);
         }
 
         .image-3 {
-            margin: 130px 0;
+            margin: 35% 0;
+
+            background: linear-gradient(218.48deg, rgba(0, 0, 0, 0.24) 43.26%, rgba(12, 12, 12, 0.74) 74.04%),  url(/assets/show-room/room-2.png);
         }
     }
 }

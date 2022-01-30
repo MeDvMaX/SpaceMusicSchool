@@ -9,6 +9,7 @@ import { BlockGalleryModule } from '../blocks/gallery/gallery.module';
 import { BlockFormModule } from '../blocks/form/form.module';
 import { BlockMapModule } from '../blocks/map/map.module';
 import { BlockFooterModule } from '../blocks/footer/footer.module';
+import { BlockCardReviewModule } from '../blocks/card-review/card-review.module';
 
 
 
@@ -21,6 +22,7 @@ import { BlockFooterModule } from '../blocks/footer/footer.module';
     BlockHeaderModule,
     BlockMainModule,
     BlockCardModule,
+    BlockCardReviewModule,
     BlockShowRoomModule,
     BlockGalleryModule,
     BlockFormModule,

@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 import { BlockCardReviewItem } from 'src/modules/interfaces/blocks.interface';
 
 @Component({
-  selector: 'block-card',
+  selector: 'block-card-review',
   templateUrl: './card-review.component.html',
   styleUrls: ['./card-review.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush

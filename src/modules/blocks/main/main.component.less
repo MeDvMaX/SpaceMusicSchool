@@ -1,15 +1,16 @@
-@import url(../../shared/colors.less);
+@import url(../../shared);
 
 :host {
+    background: url("/assets/main/background-x1.png") top right no-repeat, linear-gradient(180deg, #7A00B4 0%, rgba(70, 1, 124, 0.317708) 59%, rgba(45, 2, 99, 0) 100%);
+    background-size: contain;
+}
+
+.sm-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 100px;
-    height: 80vh;
-    min-height: 500px;
-    // background: linear-gradient(263.13deg, #AB47BC 0%, #4A148C 100%);
-    background: linear-gradient(180deg, #7A00B4 0%, rgba(70, 1, 124, 0.317708) 59%, rgba(45, 2, 99, 0) 100%);
+    margin: -80px 0;
 }
 
 .main-wrapper {
@@ -29,6 +30,7 @@
     }
 }
 
-.main-image {
-
+.background {
+    position: absolute;
+    top: 0;
 }

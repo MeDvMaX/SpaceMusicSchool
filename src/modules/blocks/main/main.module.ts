@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BlockMainComponent } from './main.component';
 import { TuiButtonModule } from '@taiga-ui/core';
+import { BlockHeaderModule } from '../header/header.module';
 
 
 
@@ -11,6 +12,7 @@ import { TuiButtonModule } from '@taiga-ui/core';
   ],
   imports: [
     CommonModule,
+    BlockHeaderModule,
     TuiButtonModule,
   ],
   exports: [

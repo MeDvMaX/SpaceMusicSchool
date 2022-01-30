@@ -1,8 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@taiga-ui/core/styles/taiga-ui-global';
-@import 'modules/shared/colors.less';
+@import 'modules/shared/variables';
 
 @font-fallback: 'Manrope', -apple-system, 'BlinkMacSystemFont', system-ui, 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif;
+
+html, body {
+    // overflow-x: hidden;
+}
 
 :root {
     --tui-heading-font: 'Raleway', @font-fallback !important;
@@ -15,4 +19,34 @@
 .root {
     height: 100%;
     width: 100%;
+}
+
+.sm-container {
+    @media @mobile {
+        padding: 16px 32px;
+        height: 60vh;
+        min-height: 500px;
+        min-width: 480px;
+    }
+
+    @media @tablet {
+        padding: 32px 50px;
+        height: 60vh;
+        min-height: 500px;
+        min-width: 640px;
+    }
+
+    @media @desktop {
+        padding: 50px 100px;
+        height: 60vh;
+        min-height: 500px;
+        min-width: 960px;
+    }
+
+    @media @desktop-lg {
+        padding: 50px 100px;
+        height: 60vh;
+        min-height: 500px;
+        min-width: 960px;
+    }
 }

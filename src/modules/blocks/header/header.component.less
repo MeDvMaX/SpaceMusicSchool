@@ -1,4 +1,4 @@
-@import url(../../shared/colors.less);
+@import url(../../shared);
 
 :host {
     display: flex;
@@ -9,11 +9,12 @@
     width: calc(100% - 200px);
     padding: 0 100px;
 
-    background-color: @background-base-1;
+    // background-color: @background-base-1;
 
-    position: fixed;
-    top: 0;
-    z-index: 99;
+    // for fixed header
+    // position: fixed;
+    // top: 0;
+    // z-index: 99;
 }
 
 .header_item {
@@ -27,7 +28,7 @@
         justify-content: left;
 
         span {
-            color: @color-logo;
+            color: @background-base-2;
         }
     }
     

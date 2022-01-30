@@ -1,11 +1,13 @@
-<div class="wrapper" [ngClass]="{'wrapper-image': withImage}">
-    <div class="title tui-text_h1">
-        {{title}}
-    </div>
-    
-    <div class="cards" >
-        <ng-container *ngFor="let card of cards">
-            <card-item class="card"[card]="card" [withImage]="withImage"></card-item>
-        </ng-container>
+<div class="sm-container" [ngClass]="{'wrapper-image': withImage}">
+    <div class="wrapper" [ngClass]="{'wrapper-image': withImage}">
+        <div class="title sm-font-h1 sm-bold-h">
+            {{title}}
+        </div>
+        
+        <div class="cards" >
+            <ng-container *ngFor="let card of cards">
+                <card-item class="card"[card]="card" [withImage]="withImage"></card-item>
+            </ng-container>
+        </div>
     </div>
 </div>
