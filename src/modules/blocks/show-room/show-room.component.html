@@ -1,20 +1,18 @@
 <div class="sm-container" *ngIf="item">
     <div class="title">
-        <div class="sm-font-h1">
-            {{item.title}}
+        <div class="sm-font-h1 sm-bold-h" [innerHTML]="item.title">
         </div>
-        <div class="discription sm-font-h1">
-            {{item.discription}}
+        <div class="discription sm-font-h1 sm-bold-h" [innerHTML]="item.discription">
         </div>
     </div>
     
-    <div class="images" *ngIf="item.images as images">
+    <div class="images sm-font-p1 sm-bold-p" *ngIf="item.images as images">
         <!-- <img *ngFor="let image of item.images" src="{{image.src}}" alt="Перейти"> -->
         <div class="images-groupe">
             <div class="image image-1">Учись музыке, что бы создавать собственные произведения</div>
             <div class="image image-2">Запиши что угодно в студийном качестве</div>
         </div>
-        <div class="images-groupe">
+        <div class="images-groupe images-groupe-bold">
             <div class="image image-3">Создай собственный клип и стань звездой YouTube или поделись с друзьями</div>
         </div>
     </div>

@@ -17,7 +17,7 @@ export class PageMainComponent implements OnInit {
   };
 
   showRoom: BlockShowRoomItem = {
-    title: 'Хотите создать что-то необычное?',
+    title: 'Хотите создать<br>что-то необычное?',
     discription: 'Мы поможем...',
     images: [
       {
@@ -123,13 +123,13 @@ export class PageMainComponent implements OnInit {
     {
       title: 'Максик',
       subtitle: 'Основатель SpaceMusic',
-      src: '/assets/card-review/max.png',
+      src: '/assets/gallery/max.png',
       link: 'string',
     },
     {
       title: 'Лёха',
       subtitle: 'Основатель SpaceMusic',
-      src: '/assets/card-review/alex.png',
+      src: '/assets/gallery/alex.png',
       link: 'string',
     }
   ];
