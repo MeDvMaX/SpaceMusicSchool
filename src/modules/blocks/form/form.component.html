@@ -8,9 +8,12 @@
         <tui-input class="b-form" formControlName="name">
             Имя
         </tui-input>
-        <tui-input class="b-form" formControlName="phone">
+        <tui-input-phone class="b-form" formControlName="phone">
             Телефон
-        </tui-input>
-        <button class="b-form button" tuiButton size='l'>{{item.buttonTitle}}</button>
+        </tui-input-phone>
+        <button tuiButton
+                class="b-form button"
+                size='l'
+                (click)="onSubmit()">{{item.buttonTitle}}</button>
     </form>
 </div>

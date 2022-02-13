@@ -1,13 +1,16 @@
 @import url(../../shared);
 
-:host {
+.sm-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
 
     height: 80px;
-    width: calc(100% - 200px);
-    padding: 0 100px;
+    min-height: auto;
+    // width: calc(100% - 200px);
+
+    padding-top: 0;
+    padding-bottom: 0;
 
     // background-color: @background-base-1;
 
@@ -36,6 +39,14 @@
         flex: 2;
         justify-content: center;
 
+        @media @tablet-line {
+            display: none;
+        }
+    
+        @media @desktop-line {
+            display: block;
+        }
+
         a {
             margin: 0 12px;
             color: @color-base-2;
@@ -56,5 +67,17 @@
             // }
         }
     }
-    
+}
+
+.header_menu {
+    align-self: center;
+
+    @media @tablet-line {
+        display: flex;
+    }
+
+    @media @desktop-line {
+        display: none;
+    }
+
 }

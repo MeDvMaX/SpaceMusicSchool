@@ -1,17 +1,42 @@
-<div class="header_item header_item_logo">
-    <span class="sm-font-h5 sm-bold-p">SpaceMusic</span>
-</div>
+<div class="sm-container">
+    <div class="header_item header_item_logo">
+        <span class="sm-font-h5 sm-bold-p">SpaceMusic</span>
+    </div>
 
-<div class="header_item header_item_links sm-font-p3">
-    <a *ngFor="let link of links"
-       tuiLink
-       [routerLink]="link.link">
-       {{link.title}}
-    </a>
-</div>
+    <div class="header_item header_item_links sm-font-p3">
+        <a *ngFor="let link of links"
+        tuiLink
+        [routerLink]="link.link">
+        {{link.title}}
+        </a>
+    </div>
 
-<div class="header_item header_item_button">
-    <button class="header_button" tuiButton appearance="outline" type="button" size="m">
-        <span class="sm-font-p3" style="margin: 0 26px">Записатся</span>
-    </button>
+    <div class="header_item header_item_button">
+        <button class="header_button" tuiButton appearance="outline" type="button" size="m">
+            <span class="sm-font-p3" style="margin: 0 26px">Записатся</span>
+        </button>
+    </div>
+
+    <div class="header_menu">
+        <tui-hosted-dropdown #dropdown [content]="content" [(open)]="dropdownOpen">
+            <button
+                tuiIconButton
+                appearance="icon"
+                icon="tuiIconMenuLarge"
+                type="button"
+                size="xl"
+                [pseudoHovered]="dropdown.open || null"
+            ></button>
+        </tui-hosted-dropdown>
+
+        <ng-template #content let-activeZone>
+            <tui-data-list tuiDataListDropdownManager>
+                <button *ngFor="let link of links"
+                        tuiOption
+                        (click)="onSelect(link.link)">
+                    {{link.title}}
+                </button>
+            </tui-data-list>
+        </ng-template>
+    </div>
 </div>

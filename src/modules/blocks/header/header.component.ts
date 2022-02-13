@@ -1,5 +1,7 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { HeaderLink } from './header.interface';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {Router} from '@angular/router';
+
+import {HeaderLink} from './header.interface';
 
 @Component({
   selector: 'block-header',
@@ -7,7 +9,9 @@ import { HeaderLink } from './header.interface';
   styleUrls: ['./header.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BlockHeaderComponent implements OnInit {
+export class BlockHeaderComponent {
+
+  dropdownOpen = false;
 
   links: HeaderLink[] = [
     {
@@ -36,8 +40,9 @@ export class BlockHeaderComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private readonly router: Router) { }
 
-  ngOnInit(): void {
+  onSelect(link: string) {
+    this.router.navigateByUrl(link);
   }
 }
