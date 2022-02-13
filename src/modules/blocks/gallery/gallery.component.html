@@ -1,16 +1,16 @@
 <div class="sm-container">
     <div class="title">
-        <div class="sm-font-h1">
+        <div class="sm-font-h1 sm-bold-h">
             {{title}}
         </div>
     </div>
     
     <div class="images">
         <div *ngFor="let image of images" class="image" [ngStyle]="getStyle(image)">
-            <div class="sm-font-h5">
+            <div class="sm-font-h5 sm-bold-p">
                 {{image.title}}
             </div>
-            <div class="tui-text_body-l">
+            <div class="sm-font-p3">
                 {{image.subtitle}}
             </div>
         </div>
