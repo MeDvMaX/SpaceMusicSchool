@@ -26,7 +26,6 @@ html, body {
         padding: 32px 32px;
         height: 60vh;
         min-height: 500px;
-        min-width: 480px;
     }
 
     @media @tablet {
@@ -48,6 +47,38 @@ html, body {
         height: 60vh;
         min-height: 500px;
         min-width: 960px;
+    }
+}
+
+.mobile-display {
+    @media @tablet {
+        display: none !important;
+    }
+
+    @media @desktop-line {
+        display: none !important;
+    }
+}
+
+.tablet-line-display {
+    @media @desktop-line {
+        display: none !important;
+    }
+}
+
+.tablet-display {
+    @media @mobile {
+        display: none !important;
+    }
+
+    @media @desktop-line {
+        display: none !important;
+    }
+}
+
+.desktop-line-display {
+    @media @tablet-line {
+        display: none !important;
     }
 }
 

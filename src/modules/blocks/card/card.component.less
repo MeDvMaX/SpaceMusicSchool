@@ -3,66 +3,117 @@
 .sm-container {
     border-radius: 40px;
 
-    height: 50vh;
+    // height: 50vh;
+    height: 100%;
 
     min-height: 400px;
 
     &-image {
         min-height: 570px;
     }
-}
 
-.wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    >.wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
 
-    min-height: 400px;
-    margin-top: 30px;
+        min-height: 400px;
+        margin-top: 30px;
 
-    &-image {
-        min-height: 570px;
-        margin-top: 0;
+        &-image {
+            min-height: 570px;
+            margin-top: 0;
+
+            .title {
+                // margin-top: 17px;
+            }
+
+            @media @mobile {
+                .cards.cards {
+                    margin-top: 80px;
+
+                    .card {
+                        &:not(:first-child) {
+                            margin-top: 72px;
+                        }
+                    }
+                }
+            }
+
+            @media @tablet {
+                .cards.cards {
+                    margin-top: 80px;
+
+                    .card {
+                        &:last-child {
+                            margin-top: 72px;
+                        }
+                    }
+                }
+            }
+
+            @media @desktop-line {
+                .cards.cards {
+                    margin-top: 140px;
+                }
+            }
+        }
 
         .title {
-            // margin-top: 17px;
+            display: flex;
+            justify-content: left;
+            width: 100%;
         }
 
         .cards {
-            margin-top: 100px;
-        }
-    }
+            display: grid;
 
-    .title {
-        display: flex;
-        justify-content: left;
-        width: 100%;
+            @media @mobile {
+                grid-template-columns: 1fr;
+            }
 
-        // margin-top: 80px;
-    }
+            @media @tablet {
+                grid-template-columns: 1fr 1fr;
+            }
 
-    .cards {
-        display: grid;
+            @media @desktop-line {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
 
-        @media @tablet-line {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        @media @desktop-line {
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        flex: 1;
-        width: 100%;
-        padding-top: 40px;
-
-        .card {
             flex: 1;
-            height: 100%;
+            width: 100%;
+            padding-top: 32px;
 
-            &:not(:last-child) {
-                margin-right: 24px;
+            .card {
+                flex: 1;
+                height: 100%;
+
+                @media @mobile {
+                    &:not(:first-child) {
+                        margin-top: 24px;
+                    }
+                }
+
+                @media @tablet {
+                    margin-right: 24px;
+
+                    &:last-child {
+                        margin-top: 24px;
+                    }
+                }
+
+                @media @desktop {
+                    &:not(:last-child) {
+                        margin-right: 24px;
+                    }
+                }
+
+                @media @desktop-lg {
+                    &:not(:last-child) {
+                        margin-right: 24px;
+                    }
+                }
             }
         }
     }

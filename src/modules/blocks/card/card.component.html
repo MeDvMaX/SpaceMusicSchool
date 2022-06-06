@@ -8,6 +8,35 @@
             <ng-container *ngFor="let card of cards">
                 <card-item class="card"[card]="card" [withImage]="withImage"></card-item>
             </ng-container>
+
+            <!-- <ng-container *ngFor="let card of cards">
+                <div class="card">
+                    <a class="island"
+                        [ngClass]="{'island-image': withImage}"
+                        size="l"
+                        href="{{card.link}}"
+                        tuiIsland
+                        [hoverable]="true">
+                        <div class="wrapper" [ngClass]="{'wrapper-image': withImage}">
+                            <div *ngIf="withImage" class="image" [ngStyle]="style">
+                            </div>
+                            <div class="text">
+                                <figure class="tui-island__figure">
+                                    <div class="some-figure"></div>
+                                </figure>
+                                <div class="text-block">
+                                    <span class="sm-font-h4 sm-bold-p">
+                                        {{card.title}}
+                                    </span>
+                                    <p class="sm-font-p3">
+                                        {{card.discription}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </ng-container> -->
         </div>
     </div>
 </div>

@@ -10,7 +10,13 @@ export class BlockShowRoomComponent implements OnInit {
 
   @Input() item: BlockShowRoomItem | null = null;
 
+  carouselIndex = 0;
+
   constructor() { }
+
+  getImageClass(index: number): string {
+    return 'image-' + (1 + index);
+  }
 
   ngOnInit(): void {
   }

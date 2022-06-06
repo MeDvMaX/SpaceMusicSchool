@@ -17,7 +17,7 @@ export class PageMainComponent implements OnInit {
   };
 
   showRoom: BlockShowRoomItem = {
-    title: 'Хотите создать<br>что-то необычное?',
+    title: 'Хотите создать <br class="desktop-line-display">что-то необычное?',
     discription: 'Мы поможем...',
     images: [
       {

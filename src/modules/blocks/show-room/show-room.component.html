@@ -5,15 +5,42 @@
         <div class="discription sm-font-h1 sm-bold-h" [innerHTML]="item.discription">
         </div>
     </div>
-    
-    <div class="images sm-font-p1 sm-bold-p" *ngIf="item.images as images">
-        <!-- <img *ngFor="let image of item.images" src="{{image.src}}" alt="Перейти"> -->
-        <div class="images-groupe">
-            <div class="image image-1">Учись музыке, что бы создавать собственные произведения</div>
-            <div class="image image-2">Запиши что угодно в студийном качестве</div>
+
+    <ng-container *ngIf="item.images as images">
+        <div class="images sm-font-p1 sm-bold-p mobile-display" >
+            <tui-carousel
+                [draggable]="true"
+                [itemsCount]="2"
+                [(index)]="carouselIndex"
+            >
+                <ng-container *ngFor="let image of item.images; let index = index">
+                    <div *tuiItem
+                         alt=""
+                         draggable="false"
+                         class="image"
+                         [ngClass]="getImageClass(index)"
+                         [class.item_active]="index === carouselIndex + 1"
+                    >
+                        {{ image.title }}
+                    </div>
+                </ng-container>
+            </tui-carousel>
         </div>
-        <div class="images-groupe images-groupe-bold">
-            <div class="image image-3">Создай собственный клип и стань звездой YouTube или поделись с друзьями</div>
+        <div class="images sm-font-p1 sm-bold-p tablet-display" >
+            <div *ngFor="let image of item.images; let index = index"
+                 class="image"
+                 [ngClass]="getImageClass(index)">
+                 {{ image.title }}
+            </div>
         </div>
-    </div>
+        <div class="images sm-font-p1 sm-bold-p desktop-line-display" >
+            <div class="images-groupe">
+                <div class="image image-1">Учись музыке, что бы создавать собственные произведения</div>
+                <div class="image image-3">Запиши что угодно в студийном качестве</div>
+            </div>
+            <div class="images-groupe images-groupe-bold">
+                <div class="image image-2">Создай собственный клип и стань звездой YouTube или поделись с друзьями</div>
+            </div>
+        </div>
+    </ng-container>
 </div>
