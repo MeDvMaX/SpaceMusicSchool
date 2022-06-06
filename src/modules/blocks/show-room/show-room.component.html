@@ -10,12 +10,11 @@
         <div class="images sm-font-p1 sm-bold-p mobile-display" >
             <tui-carousel
                 [draggable]="true"
-                [itemsCount]="2"
+                [itemsCount]="1.25"
                 [(index)]="carouselIndex"
             >
                 <ng-container *ngFor="let image of item.images; let index = index">
                     <div *tuiItem
-                         alt=""
                          draggable="false"
                          class="image"
                          [ngClass]="getImageClass(index)"
