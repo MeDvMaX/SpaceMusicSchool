@@ -123,13 +123,15 @@ export class PageMainComponent implements OnInit {
     {
       title: 'Максик',
       subtitle: 'Основатель SpaceMusic',
-      src: '/assets/gallery/max.png',
+      // src: '/assets/gallery/max.png',
+      src: '/assets/guitar.png',
       link: 'string',
     },
     {
       title: 'Лёха',
       subtitle: 'Основатель SpaceMusic',
-      src: '/assets/gallery/alex.png',
+      // src: '/assets/gallery/alex.png',
+      src: '/assets/guitar.png',
       link: 'string',
     }
   ];
