@@ -2,16 +2,49 @@
 
 .sm-container {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 
     flex: 1;
 
     color: @color-base-2;
+
+    @media @tablet-line {
+        flex-direction: column;
+        min-height: 750px;
+    }
+
+    @media @desktop-line {
+        flex-direction: row;
+    }
 }
 
 .contacts {
     flex: 2;
+
+    @media @desktop-line {
+        margin-right: 70px;
+    }
+
+    .subtitles {
+        display: flex;
+
+        @media @tablet-line {
+            flex-direction: row;
+            margin-bottom: 32px;
+        }
+
+        @media @desktop-line {
+            flex-direction: column;
+        }
+
+        >div {
+            flex: 1;
+        }
+
+        >div:not(:last-child) {
+            margin-right: 60px;
+        }
+    }
 
     .title {
         margin-top: 40px;
@@ -24,7 +57,7 @@
 }
 
 .map {
-    flex: 3;
+    flex: 4;
 
     border-radius: 16px;
 

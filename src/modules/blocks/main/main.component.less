@@ -3,8 +3,18 @@
 :host {
     display: block;
 
-    background: url("/assets/main/background-x1.png") top right no-repeat, linear-gradient(180deg, #7A00B4 0%, rgba(70, 1, 124, 0.317708) 59%, rgba(45, 2, 99, 0) 100%);
-    background-size: contain;
+    @media @mobile {
+        background: url("/assets/main/background-x3.png") no-repeat top right / contain;
+    }
+
+    @media @tablet {
+        background: url("/assets/main/background-x2.png") no-repeat top right / contain, linear-gradient(180deg, #7A00B4 0%, rgba(70, 1, 124, 0.317708) 59%, rgba(45, 2, 99, 0) 100%);
+    }
+
+    @media @desktop-line {
+        background: url("/assets/main/background-x1.png") no-repeat top right / contain, linear-gradient(180deg, #7A00B4 0%, rgba(70, 1, 124, 0.317708) 59%, rgba(45, 2, 99, 0) 100%);
+    }
+
 }
 
 .sm-container {

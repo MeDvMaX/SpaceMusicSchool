@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageMainModule } from "../main/main.module";
 import { HttpClientModule } from "@angular/common/http";
+import { ScreenService } from "../services/screen.service";
 
 @NgModule({
   declarations: [

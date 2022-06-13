@@ -4,7 +4,7 @@
     </div>
     
     <div class="cards" >
-        <tui-carousel [draggable]="true" [itemsCount]="3">
+        <tui-carousel [draggable]="true" [itemsCount]="caruseleSize">
             <ng-container *ngFor="let card of cards">
                 <div *tuiItem>
                     <a class="island"
@@ -16,11 +16,11 @@
                                 <figure class="tui-island__figure">
                                     <div class="some-figure"></div>
                                 </figure>
-                                <div class="text-block">
+                                <div class="text-block sm-bold-p">
                                     <h3 class="title sm-font-h4">
-                                        {{card.title}}
+                                        &ldquo;
                                     </h3>
-                                    <p class="description sm-font-p3">
+                                    <p class="description sm-font-p2">
                                         {{card.discription}}
                                     </p>
                                 </div>

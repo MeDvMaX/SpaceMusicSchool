@@ -30,19 +30,14 @@
     }
 }
 
-// .island {
-//     height: 200px;
+tui-carousel {
+    display: flex;
 
-//     flex: 1;
-
-//     .wrapper {
-//         .text {
-//             margin-top: 4px;
-//             margin-right: 20px;
-
-//             .sm-font-h4 {
-//                 margin: 0;
-//             }
-//         }
-//     }
-// }
+    ::ng-deep .t-item:last-child {
+        padding: 0;
+    }
+    
+    ::ng-deep .t-item:not(:last-child) {
+        padding: 0 24px 0 0;
+    } 
+} 
