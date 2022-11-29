@@ -10,7 +10,7 @@
     justify-content: center;
     flex-direction: column;
 
-    .title {
+    .title { // nothing
         display: flex;
         justify-content: left;
         width: 100%;
@@ -18,16 +18,54 @@
         // margin-top: 80px;
     }
 
+    .text-block {
+        height: 300px;
+    }
+
     .cards {
+        width: 100%;
+
         .description {
+            height: 76%;
             margin-bottom: 40px;
+            overflow: hidden;
         }
 
         ::ng-deep .t-wrapper {
 
             padding-top: 40px;
         }
+
+        .item {
+            width: 200px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+
+            .author {
+                display: flex;
+                align-items: center;
+
+                &_name {
+                    margin-left: 20px;
+                }
+            }
+        }
     }
+}
+
+.button_close {
+    display: flex;
+    justify-content: end;
+}
+
+.dialog_image {
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    margin-bottom: 20px;
 }
 
 tui-carousel {

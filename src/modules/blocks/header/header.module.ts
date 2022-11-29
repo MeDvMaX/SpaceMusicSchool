@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { TuiButtonModule, TuiDataListModule, TuiHostedDropdownModule, TuiLinkModule } from '@taiga-ui/core';
+import {CommonModule} from '@angular/common';
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
+import {TuiButtonModule, TuiDataListModule, TuiHostedDropdownModule, TuiLinkModule} from '@taiga-ui/core';
 
-import { BlockHeaderComponent } from './header.component';
+import {BlockHeaderComponent} from './header.component';
 
 @NgModule({
   declarations: [

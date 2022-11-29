@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { BlockCardReviewComponent } from './card-review.component';
-import { TuiIslandModule, TuiCarouselModule } from '@taiga-ui/kit';
-import { TuiSvgModule } from '@taiga-ui/core';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {BlockCardReviewComponent} from './card-review.component';
+import {TuiIslandModule, TuiCarouselModule, TuiAvatarModule} from '@taiga-ui/kit';
+import {TuiButtonModule, TuiSvgModule} from '@taiga-ui/core';
 
 
 
@@ -14,7 +14,9 @@ import { TuiSvgModule } from '@taiga-ui/core';
     CommonModule,
     TuiIslandModule,
     TuiCarouselModule,
+    TuiButtonModule,
     TuiSvgModule,
+    TuiAvatarModule,
   ],
   exports: [
     BlockCardReviewComponent

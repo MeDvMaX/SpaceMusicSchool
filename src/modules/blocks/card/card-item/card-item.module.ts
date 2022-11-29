@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CardItemComponent } from './card-item.component';
-import { TuiIslandModule } from '@taiga-ui/kit';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {CardItemComponent} from './card-item.component';
+import {TuiIslandModule} from '@taiga-ui/kit';
+import {TuiButtonModule} from '@taiga-ui/core';
 
 
 
@@ -12,6 +13,7 @@ import { TuiIslandModule } from '@taiga-ui/kit';
   imports: [
     CommonModule,
     TuiIslandModule,
+    TuiButtonModule,
   ],
   exports: [
     CardItemComponent

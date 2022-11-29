@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { BlockCommentsComponent } from './comments.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {BlockCommentsComponent} from './comments.component';
 
 
 

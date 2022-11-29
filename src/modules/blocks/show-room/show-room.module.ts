@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { BlockShowRoomComponent } from './show-room.component';
-import { TuiCarouselModule } from '@taiga-ui/kit';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {BlockShowRoomComponent} from './show-room.component';
+import {TuiCarouselModule} from '@taiga-ui/kit';
 
 
 

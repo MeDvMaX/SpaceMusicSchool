@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SpaceMusicSchool';
+
+  constructor(private scroller: ViewportScroller) {}
+
+  onClick() {
+    this.scroller.scrollToAnchor("form");
+  }
 }

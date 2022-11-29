@@ -7,31 +7,48 @@
         <tui-carousel [draggable]="true" [itemsCount]="caruseleSize">
             <ng-container *ngFor="let card of cards">
                 <div *tuiItem>
-                    <a class="island"
-                        size="l"
-                        tuiIsland
-                        [hoverable]="true">
-                        <div class="wrapper">
+                    <a size="l"
+                       tuiIsland
+                       [hoverable]="true">
+                        <div (click)="openComment(template)">
                             <div class="text">
                                 <figure class="tui-island__figure">
                                     <div class="some-figure"></div>
                                 </figure>
                                 <div class="text-block sm-bold-p">
-                                    <h3 class="title sm-font-h4">
-                                        &ldquo;
-                                    </h3>
+                                    <tui-svg src="/assets/comment_icon.svg"></tui-svg>
                                     <p class="description sm-font-p2">
                                         {{card.discription}}
                                     </p>
                                 </div>
-                                <div *ngIf="card.comment">
-                                    <tui-svg src="tuiIconMastercard"></tui-svg>
-                                    <span>{{card.comment.author}}</span>
+                                <div class="footer" *ngIf="card.comment">
+                                    <div class="author">
+                                        <tui-avatar [avatarUrl]="card.comment.icon" size="s"></tui-avatar>
+                                        <span class="author_name">{{card.comment.author}}</span>
+                                    </div>
+                                    <tui-svg src="tuiIconShowLarge"></tui-svg>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
+                <ng-template #template
+                             let-observer>
+                    <div class="dialog_image" [ngStyle]="{'background-image': getImgStyle(card.comment.icon)}">
+                    </div>
+                    <div>
+                        {{ card.discription }}
+                    </div>
+
+                    <div class="button_close">
+                        <button tuiButton
+                                type="button"
+                                size="m"
+                                (click)="observer.complete()">
+                            Закрыть
+                        </button>
+                    </div>
+                </ng-template>
             </ng-container>
         </tui-carousel>
     </div>

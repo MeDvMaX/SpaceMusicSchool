@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { BlockCardItem } from 'src/modules/interfaces/blocks.interface';
+import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import {BlockCardItem} from 'src/modules/interfaces/blocks.interface';
 
 @Component({
   selector: 'card-item',

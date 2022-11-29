@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { BlockCardReviewComponent } from './card-review.component';
+import {BlockCardReviewComponent} from './card-review.component';
 
 describe('CardComponent', () => {
   let component: BlockCardReviewComponent;

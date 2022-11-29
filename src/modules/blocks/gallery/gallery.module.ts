@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { BlockGalleryComponent } from './gallery.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {BlockGalleryComponent} from './gallery.component';
 
 
 

@@ -1,13 +1,15 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { BlockCardItem } from 'src/modules/interfaces/blocks.interface';
+import {ViewportScroller} from '@angular/common';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {BlockCardItem} from 'src/modules/interfaces/blocks.interface';
 
 @Component({
   selector: 'block-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.less'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {'id': 'block-card'}
 })
-export class BlockCardComponent implements OnInit {
+export class BlockCardComponent {
 
   index = 1;
 
@@ -15,13 +17,13 @@ export class BlockCardComponent implements OnInit {
   @Input() cards: BlockCardItem[] = [];
   @Input() withImage: string | boolean = false;
 
-  constructor() { }
+  constructor(private readonly scroller: ViewportScroller) { }
 
   style(card: BlockCardItem): Record<string, string> {
     return {'background-image': `url(${card.image?.src})`};
   }
 
-  ngOnInit(): void {
+  scrollTo(id: string) {
+    this.scroller.scrollToAnchor(id);
   }
-
 }

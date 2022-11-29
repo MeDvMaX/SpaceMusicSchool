@@ -6,7 +6,7 @@
         
         <div class="cards" >
             <ng-container *ngFor="let card of cards">
-                <card-item class="card"[card]="card" [withImage]="withImage"></card-item>
+                <card-item (click)="scrollTo('block-form')" class="card" [card]="card" [withImage]="withImage"></card-item>
             </ng-container>
 
             <!-- <ng-container *ngFor="let card of cards">

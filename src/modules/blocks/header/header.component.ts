@@ -1,3 +1,4 @@
+import {ViewportScroller} from '@angular/common';
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {Router} from '@angular/router';
 
@@ -8,6 +9,7 @@ import {HeaderLink} from './header.interface';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {'id': 'block-header'}
 })
 export class BlockHeaderComponent {
 
@@ -40,7 +42,12 @@ export class BlockHeaderComponent {
     }
   ];
 
-  constructor(private readonly router: Router) { }
+  constructor(private readonly router: Router,
+              private readonly scroller: ViewportScroller) { }
+
+  scrollTo(id: string) {
+    this.scroller.scrollToAnchor(id);
+  }
 
   onSelect(link: string) {
     this.router.navigateByUrl(link);

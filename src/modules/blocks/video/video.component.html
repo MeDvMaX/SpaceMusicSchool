@@ -1,0 +1,37 @@
+<div class="sm-container">
+    <div class="title">
+        <div class="sm-font-h1 sm-bold-h">
+            {{title}}
+        </div>
+    </div>
+    
+    <div class="images">
+        <!-- <div *ngFor="let video of videos" class="image"> -->
+            <!-- <video controls> -->
+                <!-- <source src="{{video.src}}" type="video/mp4"> -->
+            <!-- </video> -->
+            <!-- <iframe width="600" height="500"
+                    frameborder="0"
+                    [src]="secureUrl(video.src)">
+            </iframe>
+        </div> -->
+
+        <tui-carousel [draggable]="true" [itemsCount]="1">
+            <ng-container *ngFor="let video of videos">
+                <div *tuiItem>
+                    <a class="island image"
+                        size="l"
+                        tuiIsland>
+                        <div class="wrapper">
+
+                            <iframe class="iframe"
+                                    frameborder="0"
+                                    [src]="secureUrl(video.src)">
+                            </iframe>
+                        </div>
+                    </a>
+                </div>
+            </ng-container>
+        </tui-carousel>
+    </div>
+</div>

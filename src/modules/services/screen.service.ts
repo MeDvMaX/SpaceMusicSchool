@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
-import { fromEvent } from 'rxjs';
-import { debounceTime, distinctUntilChanged, map, startWith, tap } from 'rxjs/operators';
-import { IScreenSize } from './screen.model';
+import {Injectable} from '@angular/core';
+import {fromEvent} from 'rxjs';
+import {debounceTime, distinctUntilChanged, map, startWith, tap} from 'rxjs/operators';
+import {IScreenSize} from './screen.model';
 
 @Injectable({
   providedIn: 'root'

@@ -14,9 +14,9 @@ import {TuiNotificationsService} from '@taiga-ui/core';
   styleUrls: ['./form.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [TuiDestroyService],
+  host: {'id': 'block-form'}
 })
 export class BlockFormComponent {
-
   @Input() item: BlockFormItem | null = null;
 
   readonly form = new FormGroup({
@@ -28,10 +28,10 @@ export class BlockFormComponent {
     private readonly http: HttpClient,
     private readonly tuiNotification: TuiNotificationsService,
     private readonly destroy$: TuiDestroyService,
-  ) { }
+  ) {}
 
   onSubmit() {
-    if (!this.form.valid) {
+    if (!this.form.valid || !this.form.dirty) {
       return;
     }
 
