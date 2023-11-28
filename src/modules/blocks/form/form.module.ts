@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {BlockFormComponent} from './form.component';
-import {TuiButtonModule} from '@taiga-ui/core';
-import {TuiInputModule, TuiInputPhoneModule} from '@taiga-ui/kit';
-import {ReactiveFormsModule} from '@angular/forms';
+import {TuiButtonModule, TuiDataListModule} from '@taiga-ui/core';
+import {TuiDataListWrapperModule, TuiInputModule, TuiInputPhoneModule, TuiSelectModule} from '@taiga-ui/kit';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -17,6 +17,10 @@ import {ReactiveFormsModule} from '@angular/forms';
     TuiInputModule,
     TuiInputPhoneModule,
     TuiButtonModule,
+    FormsModule,
+    TuiSelectModule,
+    TuiDataListModule,
+    TuiDataListWrapperModule,
   ],
   exports: [
     BlockFormComponent

@@ -7,6 +7,10 @@
     align-items: stretch;
 
     height: 80vh;
+
+    @media @mobile {
+        height: 100%;
+    }
 }
 
 .title {
@@ -34,14 +38,23 @@
 
     max-height: 540px;
 
+    @media @mobile {
+        max-height: inherit;
+    }
+
     .image {
         flex: 1;
         border-radius: 16px;
-
         padding: 32px 24px;
+
+        background-size: cover;
+        background-position: center;
+
+        box-shadow: inset 10px 10px 1000px rgb(0 0 0 / 50%);
 
         @media @mobile {
             margin-top: 24px;
+            min-height: 40vh;
         }
 
         @media @tablet {
@@ -55,5 +68,24 @@
                 margin-right: 24px;
             }
         }
+
+        .hoverable-with-shadow()
     }
+}
+
+.button_close {
+    display: flex;
+    justify-content: end;
+}
+
+.dialog_image {
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    margin-top: 20px;
 }

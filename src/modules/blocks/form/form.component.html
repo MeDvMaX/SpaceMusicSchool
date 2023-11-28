@@ -11,6 +11,13 @@
         <tui-input-phone class="b-form input" formControlName="phone">
             Телефон
         </tui-input-phone>
+        <tui-select class="b-form input" formControlName="line">
+            Направление
+            <tui-data-list-wrapper
+                *tuiDataList
+                [items]="lines"
+            ></tui-data-list-wrapper>
+        </tui-select>
         <button tuiButton
                 class="b-form button"
                 size='l'

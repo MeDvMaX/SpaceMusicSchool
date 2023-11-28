@@ -6,7 +6,7 @@ export const environment = {
   production: false,
 
   tinkoffSiteUrl: 'https://space-music.tb.ru',
-  tinkoffFormHash: 'U2FsdGVkX18GNXSZzIcUnh4VJ9o3N6kBXdSWzjMHLHDkYFDFjWQuFTOJ4DVGdK3UhL0Hj1R1tTXWCQ4jdCFA/3vvd+s+pdwk68PP9gXRO028FpNx7rflKGWfvuof1UiL',
+  tinkoffFormHash: 'U2FsdGVkX18Uo66uXbRt2WRX1S/2HI/s70zNur3wy8q7HrBOAKXCkyvS3geexdpxd9ouqtTZpVxw2QNj1okS5wzlMBC67xRMwtr5Tk7oQSjNMf+1RkMsf8wt0SPXz8h/',
 };
 
 /*

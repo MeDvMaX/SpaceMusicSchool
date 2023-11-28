@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {BlockGalleryComponent} from './gallery.component';
+import { TuiButtonModule } from '@taiga-ui/core';
 
 
 
@@ -9,7 +10,8 @@ import {BlockGalleryComponent} from './gallery.component';
     BlockGalleryComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TuiButtonModule,
   ],
   exports: [
     BlockGalleryComponent

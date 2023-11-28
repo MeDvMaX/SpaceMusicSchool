@@ -17,7 +17,7 @@ export class BlockHeaderComponent {
 
   links: HeaderLink[] = [
     {
-      title: 'Фортепьяно',
+      title: 'Фортепиано',
       link: '',
     },
     {

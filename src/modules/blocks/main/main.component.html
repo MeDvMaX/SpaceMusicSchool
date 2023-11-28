@@ -2,12 +2,12 @@
 
 <div class="sm-container">
     <div *ngIf="item" class="main-wrapper">
-        <div class="title sm-font-h1 sm-bold-h" [innerHTML]="item.title">
-        </div>
+        <h1 class="title sm-font-h1 sm-bold-h" [innerHTML]="item.title">
+        </h1>
         <div class="description sm-font-p2" [innerHTML]="item.discription">
             <!-- Воплоти свои самые смелые музыкальные мечты в нашей
             <br>
-            студии <span class="logo">Space Music</span> -->
+            студии <span class="logo">SpaceMusic</span> -->
         </div>
         <div class="button">
             <button tuiButton (click)="scrollTo('block-form')" size="m">{{item.buttonTitle}}</button>

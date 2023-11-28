@@ -20,9 +20,12 @@ export class BlockFormComponent {
   @Input() item: BlockFormItem | null = null;
 
   readonly form = new FormGroup({
-    name: new FormControl(null),
+    name: new FormControl(null, Validators.required),
     phone: new FormControl(null, Validators.minLength(12)),
+    line: new FormControl(null, Validators.required),
   });
+
+  lines = ["Вокал", "Барабаны", "Гитара"]
 
   constructor(
     private readonly http: HttpClient,
@@ -31,17 +34,19 @@ export class BlockFormComponent {
   ) {}
 
   onSubmit() {
+    
     if (!this.form.valid || !this.form.dirty) {
       return;
     }
-
-    const {name, phone} = this.form.getRawValue();
+    debugger
+    const {name, phone, line} = this.form.getRawValue();
 
     this.http.post(
       environment.tinkoffSiteUrl + '/api/v1/submit',
       {
         field0: name,
         field1: phone,
+        field2: line,
         hash: environment.tinkoffFormHash
       },
     ).pipe(
